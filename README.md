@@ -12,6 +12,10 @@ Time in milliseconds required for each query - around 560 to 740 milliseconds(ra
 
 Data points randomly generated - 10^6 (1 million).
 
+Language used : c++
+
+Compiler used : gcc
+
 ### Pseudo-code:
 
 #### Part 1 : Data points generation 
@@ -42,4 +46,11 @@ The data points along with the time taken are printed out.
 Currently trying K-D trees if it can reduce the time taken more.
 
 The problem statement mentioned 10 million data sets but this code is for 1 million data sets. It gives less than 1 sec for 1 million data points but for 10 million data points its exceeding the limit.
+
+## How to use
+>Download the cpp file.
+
+>Compile it using gcc
+
+>run the exe file created.
 
