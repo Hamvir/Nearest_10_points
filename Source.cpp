@@ -3,9 +3,12 @@
 #include<algorithm>
 #include<cmath>
 #include<chrono>
+#include<fstream>
 using namespace std;
 int main()
 {
+	///////////////////////// Part 1 Generating Data Points ///////////////////////////
+
 	float** array = new float*[1000000];
 	cout << "Wait for few seconds as database is being created"<<endl;
 	for (int i = 0; i < 1000000; i++)
@@ -22,6 +25,9 @@ int main()
 			//cout << i << " " << j << " " << array[i][j];
 		}
 	}
+
+	//////////////// Part 2 : Asking user input //////////////////
+
 	cout << "Number of queries u want to ask??" << endl;
 	int x;
 	cin >> x;
@@ -43,6 +49,8 @@ int main()
 
 	while(i<=x)
 	{ 
+		///////////////////// Part 3 : Finding nearest points for each query //////////////////
+
 		float brr[100];
 		if (flag == 1)
 		{
@@ -96,18 +104,26 @@ int main()
 		}
 		auto time2 = chrono::high_resolution_clock::now();
 
+		///////////////// Part 4 : Output //////////////////
+
 		auto duration = chrono::duration_cast<chrono::milliseconds>(time2 - time1);
-		cout <<" i number query takes "<< duration.count() << " milli second(ms)" << endl;
-		cout << "10 nearest neighbour to "<< i<<"number query are : " << endl;
-		for (int j = 0; j < 10; j++)
+		cout << "If u want to see the dimension values in real time enter 1 else if u only want time duration enter 0" << endl;
+		int tmp;
+		cin >> tmp;
+		cout <<i<<"  number query takes "<< duration.count() << " milli second(ms)" << endl;
+		if (tmp == 1)
 		{
-			//cout << nearest[j] << endl;
-			cout << index[j];
-			for (int k = 0; k < 100; k++)
+			cout << "10 nearest neighbour to " << i << "number query are : " << endl;
+			for (int j = 0; j < 10; j++)
 			{
-				cout << array[index[j]][k] << " ";
+				//cout << nearest[j] << endl;
+				cout << index[j];
+				for (int k = 0; k < 100; k++)
+				{
+					cout << array[index[j]][k] << " ";
+				}
+				cout << endl;
 			}
-			cout << endl;
 		}
 
 		i++;
