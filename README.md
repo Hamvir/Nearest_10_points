@@ -54,3 +54,5 @@ The problem statement mentioned 10 million data sets but this code is for 1 mill
 
 >run the exe file created.
 
+>Just follow the instructions prompted in command window during running and you are good to go
+
