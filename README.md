@@ -8,7 +8,7 @@ We have a large set of datas given or randomly generated(each data point consist
 
 ### Values:
 
-Time in milliseconds required for each query - around 560 to 740 milliseconds(range generally varies between this).
+Time in milliseconds required for each query - around 850 to 1020 milliseconds(range generally varies between this).
 
 Data points randomly generated - 10^6 (1 million).
 
