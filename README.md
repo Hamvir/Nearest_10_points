@@ -34,6 +34,8 @@ Then query point is stored in an array and following search operation is done fo
 
 Using euclidean distance nearest 10 neighbours are found. The distances are calculated and stored in an array of size 10 in an sorted fashion, when a new distance is calculated and if its size is less than the highest element of array then its iteratiely sorted into array (simmilar to insertion sort). We also have another array that notes the indexes of the nearest elements. Some other optimisations are also used in the code.
 
+While calculating the euclidean distance the sum is checked and once the sum becomes greater than the largest element of the array storing the distance(of 10 nearest neighbour) it breaks away of the loop calculating the distance as its not required anymore.
+
 We have used chrono library to determine the time taken for this part only(part 3).
 
 #### Part 4 : Output 
